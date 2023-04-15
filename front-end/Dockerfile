@@ -5,7 +5,7 @@ FROM node:18-alpine as build
 WORKDIR /app
 
 # 앱 의존성 설치
-COPY package.json package-lock.json ./
+COPY package.json yarn.lock ./
 RUN npm install
 
 # 앱 소스 추가
